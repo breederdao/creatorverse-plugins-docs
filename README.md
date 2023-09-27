@@ -16,7 +16,7 @@
 
 This blueprint allows users to create a Creatorverse account.
 
-<img width="699" alt="Screenshot 2023-09-27 at 1 13 36 PM" src="https://github.com/breederdao/creatorverse-plugins-docs/tree/master/assets/blueprints/1_registration.png">
+<img width="699" alt="Screenshot 2023-09-27 at 1 13 36 PM" src="./assets/blueprints/1_registration.png">
 
 **Input Pin:**
 
@@ -45,7 +45,7 @@ Allows users to log in to the Creatorverse game.
 
 - The user must have previously registered.
 
-<img width="699" alt="Screenshot 2023-09-27 at 3 50 55 PM" src="https://github.com/breederdao/creatorverse-plugins-docs/tree/master/assets/blueprints/2_login.png">
+<img width="699" alt="Screenshot 2023-09-27 at 3 50 55 PM" src="./assets/blueprints/2_login.png">
 
 **Input Pin:**
 
