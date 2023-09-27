@@ -8,7 +8,7 @@
 
 - Search for the BreederDAO subsystem.
 
-<img width="699" alt="Screenshot 2023-09-27 at 1 13 36 PM" src="https://github.com/breederdao/creatorverse-plugins-docs/tree/master/assets/blueprints/0_subsystem.png">
+<img width="699" alt="Screenshot 2023-09-27 at 1 13 36 PM" src="./assets/blueprints/0_subsystem.png">
 
 ## BreederDAO Blueprints
 
