@@ -54,7 +54,7 @@ Allows users to log in to the Creatorverse game.
 
 **Output Pin:**
 
-- OnSuccess: The response pin triggered when registration is successful.
+- OnSuccess: The response pin triggered when login is successful.
 - OnFail: Triggered when an error is encountered during the API request.
 - Data: The successful response data.
 - Message: The error message. This pin can be empty when the response is successful.
