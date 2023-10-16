@@ -1,5 +1,19 @@
 # Creatorverse Plugins Docs
 
+## Base API Reference
+
+**Base URL**
+http://bdao-ecs-crtrvrs-wallet-api-dev-2122478437.ap-southeast-1.elb.amazonaws.com/api/v1
+
+**Output Pin Structure for All Blueprints:**
+
+- **OnSuccess:** Triggered upon a successful API request.
+- **OnFail**: Triggered if an error occurs during the API request.
+- **Data:** Holds data from a successful API request (only available when OnSuccess is activated).
+- **Message:** Contains error message for a failed API request (populated when OnFail is triggered).
+- **Response Code:** Indicates the HTTP response code received.
+
+
 ## Installation
 
 1. Request CreatorVerse UE plugins from the BreederDAO team.
@@ -12,11 +26,17 @@
 
 ## BreederDAO Blueprints
 
+
 ### Registration
 
-This blueprint allows users to create a Creatorverse account.
+**Description:**
 
-<img width="699" alt="Screenshot 2023-09-27 at 1 13 36 PM" src="./assets/blueprints/1_registration.png">
+Enables users to create a Creatorverse account.
+
+[API Reference:](http://bdao-ecs-crtrvrs-wallet-api-dev-2122478437.ap-southeast-1.elb.amazonaws.com/api/v1#/user/UserController_register)
+
+
+<img width="699" alt="Registration" src="./assets/blueprints/1_registration.png">
 
 **Input Pin:**
 
@@ -25,39 +45,80 @@ This blueprint allows users to create a Creatorverse account.
 - Password
 - Confirm Password
 
-**Output Pin:**
-
-- OnSuccess: The response pin triggered when registration is successful.
-- OnFail: Triggered when an error is encountered during the API request.
-- Data: The successful response data.
-- Message: The error message. This pin can be empty when the response is successful.
-- Response Code: The HTTP response code.
-
 **Email Verification:**
 
-After successfully registering, the user will receive a verification email. The user needs to click on the link in the email to verify their account. This step ensures that the provided email address is valid and accessible by the user.
+Upon registration, users receive a verification email to confirm the validity of their email address.
 
-## Login
+### Login
 
-Allows users to log in to the Creatorverse game.
+**Description:**
+
+Facilitates user login to the Creatorverse game.
 
 **Pre-requisite:**
 
-- The user must have previously registered.
+- User must be registered.
 
-<img width="699" alt="Screenshot 2023-09-27 at 3 50 55 PM" src="./assets/blueprints/2_login.png">
+[API Reference:](http://bdao-ecs-crtrvrs-wallet-api-dev-2122478437.ap-southeast-1.elb.amazonaws.com/api/v1#/auth/AuthController_login)
+
+<img width="699" alt="Login" src="./assets/blueprints/2_login.png">
 
 **Input Pin:**
 
 - Email or Username
 - Password
 
-**Output Pin:**
+**Data Struct:**
 
-- OnSuccess: The response pin triggered when login is successful.
-- OnFail: Triggered when an error is encountered during the API request.
-- Data: The successful response data.
-- Message: The error message. This pin can be empty when the response is successful.
-- Response Code: The HTTP response code.
+<img width="500" alt="Login Struct" src="./assets/blueprints/2_login_data.png">
 
 **Note:** Upon successful login, a Bearer token will be generated. This token is essential for accessing other APIs within the Creatorverse ecosystem.
+
+### Get User Data
+
+**Description:**
+
+Retrieve user account data, including user information, DATs, and currency balances.
+
+**Pre-requisite:**
+
+- User must be logged in.
+
+[API Reference:](http://bdao-ecs-crtrvrs-wallet-api-dev-2122478437.ap-southeast-1.elb.amazonaws.com/api/v1#/user/UserController_getUser)
+
+<img width="699" alt="Login" src="./assets/blueprints/3_getUserData.png">
+
+**Data Struct:**
+
+<img width="699" alt="Login" src="./assets/blueprints/3_getUserdData_data.png">
+
+### Get User Dats
+
+**Description:**
+
+Fetch the current user’s DATs.
+
+[API Reference:](http://bdao-ecs-crtrvrs-wallet-api-dev-2122478437.ap-southeast-1.elb.amazonaws.com/api/v1#/user/UserController_getUserDats)
+
+<img width="699" alt="Login" src="./assets/blueprints/4_getUserDats.png">
+
+**Data Struct:**
+
+<img width="699" alt="Login" src="./assets/blueprints/4_getUserDats_data.png">
+
+### Get User Currencies Balance
+
+**Description:**
+
+Retrieve the current user’s currency balances.
+
+[API Reference:](http://bdao-ecs-crtrvrs-wallet-api-dev-2122478437.ap-southeast-1.elb.amazonaws.com/api/v1#/user/UserController_getUserCurrencies)
+
+<img width="699" alt="Login" src="./assets/blueprints/5_getUserCurrencies.png">
+
+**Data Struct:**
+
+<img width="699" alt="Login" src="./assets/blueprints/5_getUserCurrencies_data.png">
+
+
+
